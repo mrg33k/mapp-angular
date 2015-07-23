@@ -1,0 +1,43 @@
+/* app css stylesheet */
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+body{font-family: 'Didact Gothic' !important;color: #4A4A4A !important;outline: none !important;}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+img{max-width: 100%;margin-bottom: 40px;}
+.homecont{width: 100%;}
+.homecont h1,h3{text-align: center;}
+.main-info{padding-top: 33px;}
+.main-info p{width: 100%;}
+button.mainbutton{display:block;margin:40px auto !important;padding:20px 60px;border-radius: 40px;border: 3px solid #50E3C2;font-size: 25px;outline:  !important;outline: none !important;}
+.hands{margin: -100px auto;display: block;}
+.modal-body{padding: 30px 0 0 15px !important;}
+.modal-input{width: 100% !important;margin: 0px 0px 20px 0px;}
+.msm-navigation{height:105px;position: fixed;bottom: 0;width: 100%; background: #fafafa;border: 1px solid #979797;}
+.msm-beta-button{border-radius:10px; font-size:25px !important;padding:20px; background:#44C6A9 !important; color:#fff !important;border: none !important;float:right;margin: 24px 30px 0px 0px;}
+
