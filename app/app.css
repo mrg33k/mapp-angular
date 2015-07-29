@@ -29,13 +29,15 @@ body{font-family: 'Didact Gothic' !important;color: #4A4A4A !important;outline: 
   content: "";
   padding: 0;
 }
+h1{font-size: 3.5em !important;line-height: 2.2 }
+h3{font-size: 2.7em !important;}
 img{max-width: 100%;margin-bottom: 40px;}
 .homecont{width: 100%;}
 .homecont h1,h3{text-align: center;}
 .main-info{padding-top: 33px;}
 .main-info p{width: 100%;}
 button.mainbutton{display:block;margin:40px auto !important;padding:20px 60px;border-radius: 40px;border: 3px solid #50E3C2;font-size: 25px;outline:  !important;outline: none !important;}
-.hands{margin: -100px auto;display: block;}
+.hands{margin: 50px auto -50px auto;display: block;}
 .modal-body{padding: 30px 0 0 15px !important;}
 .modal-input{width: 100% !important;margin: 0px 0px 20px 0px;}
 .msm-navigation{height:105px;position: fixed;bottom: 0;width: 100%; background: #fafafa;border: 1px solid #979797;}

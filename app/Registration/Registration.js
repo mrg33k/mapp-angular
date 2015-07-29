@@ -1,15 +1,15 @@
 'use strict';
 
-var myAppView1 = angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap','firebase']);
+var myAppRegistration = angular.module('myApp.Registration', ['ngRoute', 'ui.bootstrap','firebase']);
 
 
 /*
 Route Config 
 */
-myAppView1.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+myAppRegistration.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/Registration', {
+    templateUrl: 'Registration/Registration.html',
+    controller: 'RegistrationCtrl'
   });
 
 }])
@@ -18,7 +18,7 @@ myAppView1.config(['$routeProvider', function($routeProvider) {
 /*
 Main Controller View 1
 */
-.controller('View1Ctrl',['$scope', '$modal', '$log', function($scope,$modal) {
+.controller('RegistrationCtrl',['$scope', '$modal', '$log', function($scope,$modal) {
 
 	$scope.openBeta = function(){
 		var modalInstance = $modal.open({templateUrl: '../app/partials/modal.html',controller: 'ModalInstanceCtrl'});
@@ -35,7 +35,7 @@ Main Controller View 1
 /*
 Video Modal Instance Controller
 */
-myAppView1.controller('VideoModalInstanceCtrl', function($scope,$modalInstance, $modal){
+myAppRegistration.controller('VideoModalInstanceCtrl', function($scope,$modalInstance, $modal){
 	
 	$scope.openBeta = function(){
 		var modalInstance = $modal.open({templateUrl: '../app/partials/modal.html', controller: 'ModalInstanceCtrl'});
@@ -52,9 +52,9 @@ myAppView1.controller('VideoModalInstanceCtrl', function($scope,$modalInstance, 
 /*
 Modal Instance Controller
 */
-myAppView1.controller('ModalInstanceCtrl', function($scope,$modalInstance){
+myAppRegistration.controller('ModalInstanceCtrl', function($scope,$modalInstance){
 
-	$scope.ok = function(){
+	$scope.signUp = function(){
 		$modalInstance.close();
 	}
 
@@ -70,7 +70,7 @@ myAppView1.controller('ModalInstanceCtrl', function($scope,$modalInstance){
 /*
 Form Controller
 */
-myAppView1.controller('ModalFormCtrl', function($scope, $firebaseObject,$firebaseAuth){
+myAppRegistration.controller('ModalFormCtrl', function($scope, $firebaseObject,$firebaseAuth){
 
 	var ref = new Firebase("https://blistering-inferno-1744.firebaseio.com/");
 	var syncObject = $firebaseObject(ref);
@@ -91,7 +91,7 @@ myAppView1.controller('ModalFormCtrl', function($scope, $firebaseObject,$firebas
                 })
                     .then(function() {
                         // do things if success
-                        console.log('User creation success');
+                        $scope.$parent.cancel();
                     }, function(error) {
                         // do things if failure
                         console.log(error);
